@@ -1,0 +1,4 @@
+[package]
+org = "baltips"
+name = "app10001_hello_world"
+version = "0.1.0"
