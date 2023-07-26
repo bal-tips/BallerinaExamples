@@ -1,0 +1,4 @@
+[package]
+org = "baltips"
+name = "app20001_http_service"
+version = "0.1.0"
