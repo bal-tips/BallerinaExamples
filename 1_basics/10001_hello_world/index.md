@@ -24,8 +24,8 @@ main.bal:::main.bal.md
 To run this example on your local machine, follow these steps:
 
 1. Ensure Ballerina is installed on your machine. If not, download it from the [official Ballerina website](https://ballerina.io).
-2. Clone this repository to your local machine.
-3. Navigate to the directory `basics\10001_hello_world` file.
+2. Clone [this repository]({{< data "repo" >}}) to your local machine.
+3. Navigate to the directory `{{< pwd >}}`.
 4. Run the command `bal run`. 
 
 You should see the text "Hello, World...!" printed to your console, indicating that the program has run successfully.

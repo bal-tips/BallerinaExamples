@@ -1,1 +1,3 @@
-10001, "Hello World", "basics/10001_hello_world"
+ID, Title, Path
+10001, "Hello World", "1_basics/10001_hello_world"
+20002, "HTTP Greeting Service", "7_http/70001_http_service"
