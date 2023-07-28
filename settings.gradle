@@ -6,9 +6,9 @@
  */ 
 rootProject.name = 'Bal.tips Website'
 
-include(":example-10001_hello_world")
-include(":example-40401_foreach_array")
-include(":example-70001_http_service")
-project(":example-10001_hello_world").projectDir = file("1_basics/10001_hello_world")
-project(":example-40401_foreach_array").projectDir = file("4_statements/404_foreach/40401_foreach_array")
-project(":example-70001_http_service").projectDir = file("7_http/70001_http_service")
+include(":example:10001_hello_world")
+include(":example:40401_foreach_array")
+include(":example:70001_http_service")
+project(":example:10001_hello_world").projectDir = file("1_basics/10001_hello_world")
+project(":example:40401_foreach_array").projectDir = file("4_statements/404_foreach/40401_foreach_array")
+project(":example:70001_http_service").projectDir = file("7_http/70001_http_service")

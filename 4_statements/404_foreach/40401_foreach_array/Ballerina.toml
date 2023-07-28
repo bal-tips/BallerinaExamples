@@ -1,0 +1,4 @@
+[package]
+org = "baltips"
+name = "app40401_foreach_array"
+version = "0.1.0"

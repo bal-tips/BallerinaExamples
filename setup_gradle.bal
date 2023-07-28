@@ -65,8 +65,8 @@ function updateSettingGradle(string currentPath) returns error? {
 }
 
 function generateIncludes(string[] acc, [string, string] value) returns string[] {
-    acc.push(string `include(":example-${value[0]}")` + "\n");
-    acc.push(string `project(":example-${value[0]}").projectDir = file("${value[1]}")` + "\n");
+    acc.push(string `include(":example:${value[0]}")` + "\n");
+    acc.push(string `project(":example:${value[0]}").projectDir = file("${value[1]}")` + "\n");
     return acc;
 }
 
@@ -78,7 +78,7 @@ const string SETTINGS_GRADLE = "settings.gradle";
 const string SETTINGS_GRADLE_CONTENT = "/*\n * MIT License\n * \n * Copyright (c) 2023 Hasitha Aravinda. All rights reserved.\n * Generated File, Do not Modify!\n */ \nrootProject.name = 'Bal.tips Website'\n\n";
 const string BUILD_GRADLE = "build.gradle";
 final string BUILD_GRADLE_CONTENT = string `
-task build() {
+task test() {
     def currentDir = file(".")
     inputs.files(fileTree(".").include("*.bal"), "Ballerina.toml", "short.md", "output.txt", "tests/test.bal")
     outputs.dir("target")
@@ -87,6 +87,12 @@ task build() {
             workingDir currentDir
             commandLine "bash", "-c", "bal test"
         }
+    }
+    // Check if the short.md and index.md files exist using gradle
+    if (!file("short.md").exists()) {
+        throw new GradleException("short.md file does not exist");
+    } else if (!file("index.md").exists()) {
+        throw new GradleException("index.md file does not exist");
     }
 }
 

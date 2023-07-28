@@ -1,0 +1,4 @@
+foreach with int array
+1,2,3,4,5,
+foreach with json array
+{"name":"John","age":30},{"name":"Jane","age":25},{"name":"Smith","age":32}
