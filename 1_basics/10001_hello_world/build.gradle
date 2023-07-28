@@ -1,0 +1,22 @@
+
+task build() {
+    def currentDir = file(".")
+    inputs.files(fileTree(".").include("*.bal"), "Ballerina.toml", "short.md", "output.txt")
+    outputs.dir("target")
+    doLast {
+        exec {
+            workingDir currentDir
+            commandLine "bash", "-c", "bal test"
+        }
+    }
+}
+
+task clean() {
+    def currentDir = file(".")
+    doLast {
+        exec {
+            workingDir currentDir
+            commandLine "bash", "-c", "bal clean"
+        }
+    }
+} 
