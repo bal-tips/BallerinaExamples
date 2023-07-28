@@ -80,7 +80,7 @@ const string BUILD_GRADLE = "build.gradle";
 final string BUILD_GRADLE_CONTENT = string `
 task build() {
     def currentDir = file(".")
-    inputs.files(fileTree(".").include("*.bal"), "Ballerina.toml", "short.md", "output.txt")
+    inputs.files(fileTree(".").include("*.bal"), "Ballerina.toml", "short.md", "output.txt", "tests/test.bal")
     outputs.dir("target")
     doLast {
         exec {
