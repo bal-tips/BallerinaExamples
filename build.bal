@@ -37,6 +37,12 @@ function updateProjects(string rootPath, string currentPath) returns error? {
         }
         projects[baseName] = relPath;
         check io:fileWriteString(check file:joinPath(currentPath, BUILD_GRADLE), BUILD_GRADLE_CONTENT, io:OVERWRITE);
+
+        // Copy Test Files
+        if hasOutputFile(metadata) {
+            check file:copy(check file:joinPath(rootPath, ".templates/output.bal"),
+                check file:joinPath(currentPath, "tests/output.bal"), file:REPLACE_EXISTING);
+        }
         return;
     }
     foreach var file in metadata {
@@ -47,11 +53,19 @@ function updateProjects(string rootPath, string currentPath) returns error? {
 }
 
 function isBallerinaProject(file:MetaData[] metadata) returns boolean {
+    return hasFile(metadata, "Ballerina.toml");
+}
+
+function hasOutputFile(file:MetaData[] metadata) returns boolean {
+    return hasFile(metadata, "output.txt");
+}
+
+function hasFile(file:MetaData[] metadata, string fileName) returns boolean {
     foreach var file in metadata {
         if file.dir {
             continue;
         }
-        if file:basename(file.absPath) == "Ballerina.toml" {
+        if file:basename(file.absPath) == fileName {
             return true;
         }
     }
