@@ -1,17 +1,21 @@
 ---
-title : "Looping Through Arrays with While Loop in Ballerina"
+title: "Looping Through Arrays with While Loop in Ballerina"
 description: "Learn how to use a while loop to iterate through integer and JSON arrays in Ballerina."
-keywords :
+keywords:
     - while loop
     - array handling
     - JSON array
+tags: 
+    - "while"
+    - "JSON"
+    - "arrays"
 weight: 40501
+date: 2023-07-31
 ---
-
-# Looping Through Arrays with While Loop in Ballerina
 
 In this tutorial, we will demonstrate how to use a while loop to iterate through arrays in Ballerina. We'll use an integer array and a JSON array for this example and explain each line of code to ensure you understand how the while loop works.
 
+<!--more-->
 
 ## Example Source Code and Explanation
 

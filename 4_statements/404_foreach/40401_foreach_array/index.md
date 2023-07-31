@@ -1,16 +1,21 @@
 ---
-title : "Looping Through Arrays with Foreach in Ballerina"
+title: "Looping Through Arrays with Foreach in Ballerina"
 description: "Learn how to use for each statement to loop through integer and JSON arrays in Ballerina."
-keywords :
+keywords:
     - foreach loop
     - array handling
     - JSON array
+tags: 
+    - "foreach"
+    - "JSON"
+    - "arrays"
 weight: 40401
+date: 2023-07-31
 ---
 
-# Looping Through Arrays with Foreach in Ballerina
-
 This walkthrough focuses on using the foreach statement to loop through different types of arrays in Ballerina. We'll use both an integer array and a JSON array for this purpose. We'll then explain the code line by line to help you understand each component.
+
+<!--more-->
 
 ## Example Source Code and Explanation
 

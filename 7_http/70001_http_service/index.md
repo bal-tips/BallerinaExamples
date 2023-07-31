@@ -1,12 +1,15 @@
 ---
-title : "Creating a Greeting HTTP Service in Ballerina"
+title: "Creating a Greeting HTTP Service in Ballerina"
 description: "Create a Greeting HTTP Service in Ballerina"
-keywords :
+keywords:
     - HTTP service
     - resource function
-    - string interpolation
-    - import declaration
-weight: 20002
+tags:
+    - HTTP
+    - service
+    - resource
+weight: 70001
+date: 2023-07-30
 ---
 
 # Creating a Greeting HTTP Service in Ballerina
