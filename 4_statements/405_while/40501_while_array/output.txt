@@ -1,11 +1,11 @@
-Processing an integer array using a foreach loop
+Processing an integer array using a while loop
 Current number: 1
 Current number: 2
 Current number: 3
 Current number: 4
 Current number: 5
 
-Processing a JSON array using a foreach loop
+Processing a JSON array using a while loop
 Current person: {"name":"John","age":30}
 Current person: {"name":"Jane","age":25}
-Current person: {"name":"Smith","age":32}
+Current person: {"name":"Mary","age":20}

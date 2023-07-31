@@ -1,5 +1,8 @@
 import ballerina/file;
 import ballerina/io;
+import ballerina/toml;
+
+configurable string distribution = "2201.7.0";
 
 public function main() returns error? {
     string currentPath = file:getCurrentDir();
@@ -13,13 +16,13 @@ function validateRepoRoot(string currentPath) returns error? {
     file:MetaData[] & readonly metadata = check file:readDir(currentPath);
     boolean isRepoRoot = false;
     foreach var file in metadata {
-        if file:basename(file.absPath) == "BALLERINA_EXAMPLES.csv" {
+        if file:basename(file.absPath) == "gradle.properties" {
             isRepoRoot = true;
             break;
         }
     }
     if !isRepoRoot {
-        return error("Invalid directory, please run the script from the repo root");
+        return error("Invalid directory, please run the script from the repo root", currentPath = currentPath);
     }
 }
 
@@ -43,8 +46,11 @@ function updateProjects(string rootPath, string currentPath) returns error? {
             check file:copy(check file:joinPath(rootPath, ".templates/output.bal"),
                 check file:joinPath(currentPath, "tests/output.bal"), file:REPLACE_EXISTING);
         }
-        return;
+
+        check updateBallerinaToml(currentPath, baseName);
+        check createMarkdownFiles(currentPath);
     }
+
     foreach var file in metadata {
         if file.dir {
             check updateProjects(rootPath, file.absPath);
@@ -70,6 +76,58 @@ function hasFile(file:MetaData[] metadata, string fileName) returns boolean {
         }
     }
     return false;
+}
+
+function updateBallerinaToml(string currentPath, string baseName) returns error? {
+
+    // Update Ballerina.toml
+    string tomlPath = check file:joinPath(currentPath, "Ballerina.toml");
+    map<json> ballerinaToml = check toml:readFile(tomlPath);
+
+    map<json> package;
+    if ballerinaToml.hasKey("package") {
+        package = check ballerinaToml["package"].ensureType();
+    } else {
+        package = {};
+    }
+    package["org"] = "baltips";
+    package["name"] = string `app${baseName}`;
+    package["distribution"] = distribution;
+    if !package.hasKey("version") {
+        package["version"] = "0.1.0";
+    }
+    ballerinaToml["package"] = package;
+
+    map<json> buildOptions;
+    if ballerinaToml.hasKey("build-options") {
+        buildOptions = check ballerinaToml["build-options"].ensureType();
+    } else {
+        buildOptions = {};
+    }
+    buildOptions["observabilityIncluded"] = false;
+    ballerinaToml["build-options"] = buildOptions;
+
+    check toml:writeFile(tomlPath, ballerinaToml);
+}
+
+function createMarkdownFiles(string currentPath) returns error? {
+    string shortFilePath = check file:joinPath(currentPath, "short.md");
+    string indexFilePath = check file:joinPath(currentPath, "index.md");
+    if check file:test(shortFilePath, file:EXISTS) {
+        if check file:test(shortFilePath, file:IS_DIR) {
+            panic error("short.md is a directory", file = shortFilePath);
+        }
+    } else {
+        check io:fileWriteString(shortFilePath, "");
+    }
+
+    if check file:test(indexFilePath, file:EXISTS) {
+        if check file:test(indexFilePath, file:IS_DIR) {
+            panic error("index.md is a directory", file = indexFilePath);
+        }
+    } else {
+        check io:fileWriteString(indexFilePath, INDEX_MD);
+    }
 }
 
 function updateSettingGradle(string currentPath) returns error? {
@@ -108,6 +166,7 @@ task test() {
     } else if (!file("index.md").exists()) {
         throw new GradleException("index.md file does not exist");
     }
+    // TODO: Check for each Bal file, there is a md file.
 }
 
 task clean() {
@@ -119,4 +178,16 @@ task clean() {
         }
     }
 } 
+`;
+
+final string INDEX_MD = string `---
+title: Ballerina Example
+description: Ballerina Example
+keywords:
+    - main function
+weight: 1
+---
+
+# Ballerina Example
+
 `;

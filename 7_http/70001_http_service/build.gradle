@@ -15,6 +15,7 @@ task test() {
     } else if (!file("index.md").exists()) {
         throw new GradleException("index.md file does not exist");
     }
+    // TODO: Check for each Bal file, there is a md file.
 }
 
 task clean() {
