@@ -1,15 +1,13 @@
 ---
-title: "main.bal - Hello, World"
+title: "main.bal - Code Walkthrough"
 ---
 
-# main.bal - Hello, World in Ballerina!
-
-Welcome to the Ballerina "Hello, World" program walkthrough!
+# main.bal - Code Walkthrough!
 
 ## Line 1: Importing the I/O Module{id="line-1"}
 
 **Source Code**
-```ballerina
+```ballerina {linenos=table,linenostart=1}
 import ballerina/io;
 ```
 
