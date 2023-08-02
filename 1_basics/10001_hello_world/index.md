@@ -20,8 +20,6 @@ Welcome to the introductory Ballerina example - the classic "Hello, World!" prog
 ## Example
 
 {{< example >}}
-main.bal:::main.bal.md
-{{< /example >}}
 
 ## Running the Example
 
@@ -33,3 +31,5 @@ To run this example on your local machine, follow these steps:
 4. Run the command `bal run`. 
 
 You should see the text "Hello, World...!" printed to your console, indicating that the program has run successfully.
+
+{{< output >}}

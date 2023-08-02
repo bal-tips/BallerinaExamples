@@ -20,8 +20,6 @@ This walkthrough focuses on using the foreach statement to loop through differen
 ## Example
 
 {{< example >}}
-foreach.bal:::foreach.bal.md
-{{< /example >}}
 
 ## Running the Example
 
@@ -33,3 +31,5 @@ To run this example on your local machine, follow these steps:
 4. Run the command `bal run`. 
 
 The output will sequentially display the elements of an integer array and a JSON array, demonstrating the correct execution of the foreach loops in the program.
+
+{{< output >}}

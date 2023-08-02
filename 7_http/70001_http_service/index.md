@@ -18,9 +18,7 @@ Welcome to our example of creating a simple HTTP Greeting Service using Ballerin
 
 ## Example
 
-{{< example single="true">}}
-simple_http_service.bal:::simple_http_service.bal.md
-{{< /example >}}
+{{< example project=true test=true >}}
 
 ## Running the Example
 
