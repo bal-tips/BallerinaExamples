@@ -17,7 +17,7 @@ Welcome to the introductory Ballerina example - the classic "Hello, World!" prog
 
 <!--more-->
 
-## Example Source Code and Explanation
+## Example
 
 {{< example >}}
 main.bal:::main.bal.md

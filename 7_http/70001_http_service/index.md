@@ -12,13 +12,13 @@ weight: 70001
 date: 2023-07-30
 ---
 
-# Creating a Greeting HTTP Service in Ballerina
-
 Welcome to our example of creating a simple HTTP Greeting Service using Ballerina. This example will guide you through the process of creating an HTTP service that greets users based on the name provided in the URL. We'll break down the code and explain each part in detail.
 
-## Example Source Code and Explanation
+<!--more-->
 
-{{< example >}}
+## Example
+
+{{< example single="true">}}
 simple_http_service.bal:::simple_http_service.bal.md
 {{< /example >}}
 

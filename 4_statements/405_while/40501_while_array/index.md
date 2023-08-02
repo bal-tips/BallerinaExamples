@@ -17,10 +17,10 @@ In this tutorial, we will demonstrate how to use a while loop to iterate through
 
 <!--more-->
 
-## Example Source Code and Explanation
+## Example
 
 {{< example >}}
-foreach.bal:::foreach.bal.md
+while.bal:::while.bal.md
 {{< /example >}}
 
 ## Running the Example

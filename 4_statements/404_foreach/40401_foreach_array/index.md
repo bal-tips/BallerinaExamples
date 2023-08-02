@@ -17,7 +17,7 @@ This walkthrough focuses on using the foreach statement to loop through differen
 
 <!--more-->
 
-## Example Source Code and Explanation
+## Example
 
 {{< example >}}
 foreach.bal:::foreach.bal.md
