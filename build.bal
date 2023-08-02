@@ -9,7 +9,7 @@ public function main() returns error? {
     check validateRepoRoot(currentPath);
     check updateProjects(currentPath, currentPath);
     check updateSettingGradle(currentPath);
-    // TODO: Update BALLERINA_EXAMPLES.csv
+    check createIndexMd(currentPath);
 }
 
 function validateRepoRoot(string currentPath) returns error? {
@@ -144,6 +144,27 @@ function generateIncludes(string[] acc, [string, string] value) returns string[]
 
 function stringJoin(string acc, string value) returns string {
     return string `${acc}${value}`;
+}
+
+function stringJoinNewLine(string acc, string value) returns string {
+    return string `${acc}
+${value}`;
+}
+
+function createIndexMd(string currentPath) returns error? {
+    [string, string][] sort = projects.entries().toArray().sort();
+    string[] exampleList = from var [key, value] in sort
+        select string `* [${key}](./${value})`;
+    string content = string `---
+title: Ballerina Examples
+description: Ballerina Examples
+---
+
+# Ballerina Examples List
+
+${exampleList.reduce(stringJoinNewLine, "")}
+`;
+    check io:fileWriteString(check file:joinPath(currentPath, "_index.md"), content, io:OVERWRITE);
 }
 
 const string SETTINGS_GRADLE = "settings.gradle";
