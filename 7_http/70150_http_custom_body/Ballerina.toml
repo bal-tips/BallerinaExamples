@@ -1,0 +1,7 @@
+build-options.observabilityIncluded = false
+
+[package]
+org = "baltips"
+name = "app70150_http_custom_body"
+version = "0.1.0"
+distribution = "2201.7.0"

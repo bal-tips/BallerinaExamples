@@ -159,9 +159,6 @@ function createIndexMd(string currentPath) returns error? {
 title: Ballerina Examples
 description: Ballerina Examples
 ---
-
-# Ballerina Examples List
-
 ${exampleList.reduce(stringJoinNewLine, "")}
 `;
     check io:fileWriteString(check file:joinPath(currentPath, "_index.md"), content, io:OVERWRITE);
