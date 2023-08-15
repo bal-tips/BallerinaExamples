@@ -35,7 +35,7 @@ function testOutput() returns error? {
     stdout = "";
     test:when(printlnMockFn).call("mockPrintln");
     test:when(printMockFn).call("mockPrint");
-    main();
+    check main();
     string expected = check io:fileReadString("output.txt");
     // We have to ignore the last character because it is a new line character.
     // See fileReadString function in io module.

@@ -42,7 +42,8 @@ function updateProjects(string rootPath, string currentPath) returns error? {
         check io:fileWriteString(check file:joinPath(currentPath, BUILD_GRADLE), BUILD_GRADLE_CONTENT, io:OVERWRITE);
 
         // Copy Test Files
-        if hasOutputFile(metadata) {
+        file:MetaData[] & readonly testsMetadata = check file:readDir( check file:joinPath(currentPath, "tests"));
+        if hasOutputFile(metadata) && !hasTestOutputFile(testsMetadata) {
             check file:copy(check file:joinPath(rootPath, ".templates/output.bal"),
                 check file:joinPath(currentPath, "tests/output.bal"), file:REPLACE_EXISTING);
         }
@@ -64,6 +65,10 @@ function isBallerinaProject(file:MetaData[] metadata) returns boolean {
 
 function hasOutputFile(file:MetaData[] metadata) returns boolean {
     return hasFile(metadata, "output.txt");
+}
+
+function hasTestOutputFile(file:MetaData[] metadata) returns boolean {
+    return hasFile(metadata, "output.bal");
 }
 
 function hasFile(file:MetaData[] metadata, string fileName) returns boolean {
@@ -159,6 +164,7 @@ function createIndexMd(string currentPath) returns error? {
 title: Ballerina Examples
 description: Ballerina Examples
 ---
+
 ${exampleList.reduce(stringJoinNewLine, "")}
 `;
     check io:fileWriteString(check file:joinPath(currentPath, "_index.md"), content, io:OVERWRITE);
