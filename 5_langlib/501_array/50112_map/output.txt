@@ -1,0 +1,5 @@
+Processing an integer array using the array:map function
+[1,4,9,16,25]
+
+Processing a JSON array using the array:map function
+["John","Jane","Smith"]
