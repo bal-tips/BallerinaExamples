@@ -5,11 +5,10 @@ keywords:
     - foreach loop
     - array handling
     - JSON array
-tags: 
-    - "foreach"
-    - "JSON"
-    - "arrays"
 weight: 40401
+ballerina_feature: [iterate]
+ballerina_lang: [foreach]
+ballerina_type: [list, json]
 date: 2023-07-31
 ---
 

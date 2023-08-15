@@ -5,11 +5,10 @@ keywords:
     - while loop
     - array handling
     - JSON array
-tags: 
-    - "while"
-    - "JSON"
-    - "arrays"
 weight: 40501
+ballerina_feature: [iterate]
+ballerina_lang: [while]
+ballerina_type: [list, json]
 date: 2023-07-31
 ---
 
