@@ -5,12 +5,11 @@ keywords:
     - HTTP service
     - resource function
     - HTTP Response
-tags:
-    - HTTP
-    - HTTP_CREATED
-    - service
-    - resource
 weight: 70150
+ballerina_feature: [resource, service]
+ballerina_lang: [service, type_definition, record_inclusion]
+ballerina_type: [record]
+ballerina_module: [http]
 date: 2023-08-14
 ---
 
@@ -59,9 +58,11 @@ Open a new terminal window and enter the following command, replacing `{name}` w
 
     ```bash
     curl -X 'PUT' \
-  'http://localhost:9090/book?name={name}'
+    'http://localhost:9090/book?name={name}'
     ```
+    
     e.g., 
+  
     ```bash
     curl -X 'PUT' \
     'http://localhost:9090/book?name=BallerinaByExample'

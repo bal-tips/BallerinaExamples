@@ -1,7 +1,7 @@
 import ballerina/test;
 import ballerina/http;
 
-http:Client testClient = check new ("http://localhost:9001");
+http:Client testClient = check new ("http://localhost:9090");
 
 @test:Config {}
 public function testGet() returns error? {

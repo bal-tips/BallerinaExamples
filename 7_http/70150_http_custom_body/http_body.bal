@@ -8,7 +8,9 @@ public type Created record {|
     |} body;
 |};
 
-service on new http:Listener(9150) {
+configurable int port = 9090;
+
+service on new http:Listener(port) {
     resource function put book(string name) returns Created {
         // Implementation goes here. 
         // Partially implemented for demo purposes.

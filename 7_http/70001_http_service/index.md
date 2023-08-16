@@ -4,11 +4,11 @@ description: "Create a Greeting HTTP Service in Ballerina"
 keywords:
     - HTTP service
     - resource function
-tags:
-    - HTTP
-    - service
-    - resource
 weight: 70001
+ballerina_feature: [resource, service]
+ballerina_lang: [service,]
+ballerina_type: []
+ballerina_module: [http]
 date: 2023-07-30
 ---
 
@@ -44,6 +44,7 @@ You can test this service using either a web browser or the `curl` command in th
     ```bash
     curl localhost:9090/greeting/{name}
     ```
+
     e.g., `curl localhost:9090/greeting/Ballerina`
 
     You should see a greeting message in the terminal.

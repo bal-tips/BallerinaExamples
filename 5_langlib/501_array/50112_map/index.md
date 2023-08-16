@@ -9,6 +9,7 @@ ballerina_feature: [iterate]
 ballerina_lang: []
 ballerina_type: [list, json]
 ballerina_module: [array]
+date: 2023-07-31
 ---
 
 This example shows how to use the map function to iterate over an array and apply a function to each element of the array.
