@@ -3,5 +3,5 @@ build-options.observabilityIncluded = false
 [package]
 org = "baltips"
 name = "app50112_map"
-distribution = "2201.7.0"
+distribution = "2201.8.0"
 version = "0.1.0"

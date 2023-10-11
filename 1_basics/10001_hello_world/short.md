@@ -5,7 +5,7 @@ public function main() {
     io:println("Hello, World...!");
 }
 ```
-`bal run`
+<i class="fa fa-terminal" ></i> `bal run`
 
 ```plain
 Hello, World...!

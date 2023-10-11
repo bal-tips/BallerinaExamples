@@ -2,7 +2,7 @@ import ballerina/file;
 import ballerina/io;
 import ballerina/toml;
 
-configurable string distribution = "2201.7.0";
+configurable string distribution = "2201.8.0";
 
 public function main() returns error? {
     string currentPath = file:getCurrentDir();

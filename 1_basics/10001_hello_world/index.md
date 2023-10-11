@@ -9,19 +9,22 @@ keywords:
 tags: 
     - "main"
     - "function"
+categories:
+    - "Main Program"
+series:
+    - "Hello World"
 weight: 10001
 date: 2023-07-30
 ---
 
-Welcome to the introductory Ballerina example - the classic "Hello, World!" program. In this example, we'll walk you through a simple Ballerina program that prints "Hello, World...!" to the standard output. We'll explain the code line by line, providing an excellent starting point for those new to the language.
+Welcome to the introductory Ballerina example featuring the classic "Hello, World!" program. I'll guide you through this simple Ballerina code that displays "Hello, World...!" and explain it line by line, making it an excellent starting point for newcomers to the language.
 
 <!--more-->
-
-## Example
+Below is the complete code for this example. See <span class="text-info"><i class="far fa-lightbulb"></i> Tips</span> for detailed explanations of each line.
 
 {{< example >}}
 
-## Running the Example
+##### Running the Example
 
 To run this example on your local machine, follow these steps:
 
