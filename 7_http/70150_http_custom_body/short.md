@@ -1,10 +1,10 @@
 **Less Type Safe Version:**
 
 ```
-// Valid & expected by the client
+// Expected
 http:Created res = {body: {name : "Bal.tip", id: "123"}}; 
 
-// Valid, But not expected by the client. Typo in the field name.
+// Still valid at compile time, but the typo will cause runtime error
 http:Created res = {body: {neme : "Bal.tip", id: "123"}}; 
 ```
 

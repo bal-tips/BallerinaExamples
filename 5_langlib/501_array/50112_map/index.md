@@ -5,20 +5,22 @@ keywords:
     - map array function
     - array handling
 weight: 50112
-ballerina_feature: [iterate]
-ballerina_lang: []
-ballerina_type: [list, json]
-ballerina_module: [array]
+tags:
+    - "map function"
+    - "array"
+categories:
+    - "Array Functions"
+series:
+    - "Working with Arrays"
+    - "Methods of Iteration"
 date: 2023-07-31
 ---
 
-This example shows how to use the map function to iterate over an array and apply a function to each element of the array.
-
-## Example
+This example shows how to use the map function to iterate over an array and apply a function to each element of the array. 
 
 {{< example >}}
 
-## Running the Example
+#### Running the Example
 
 To run this example on your local machine, follow these steps:
 

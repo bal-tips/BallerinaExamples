@@ -6,21 +6,28 @@ keywords:
     - array handling
     - JSON array
 weight: 40501
-ballerina_feature: [iterate]
-ballerina_lang: [while]
-ballerina_type: [list, json]
+tags:
+    - "while"
+    - "loop"
+    - "array"
+    - "JSON array"
+categories:
+    - "Iteration"
+series:
+    - Methods of Iteration
+    - Working with Arrays
 date: 2023-07-31
 ---
 
-In this tutorial, we will demonstrate how to use a while loop to iterate through arrays in Ballerina. We'll use an integer array and a JSON array for this example and explain each line of code to ensure you understand how the while loop works.
+In this tutorial, we'll explore how to use a `while` loop to iterate over integer and JSON arrays in Ballerina. Each line of code will be explained to help you grasp the concept.
 
 <!--more-->
-
-## Example
+Below is the full code for this demonstration. For detailed explanations of each line, refer to <span class="text-info"><i class="far fa-lightbulb"></i> Tips</span>.
 
 {{< example >}}
 
-## Running the Example
+
+#### Running the Example
 
 To run this example on your local machine, follow these steps:
 

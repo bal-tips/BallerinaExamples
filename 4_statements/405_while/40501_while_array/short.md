@@ -8,12 +8,3 @@ while currentIndex < numbers.length() {
     currentIndex += 1;
 }
 ```
-`bal run`
-
-```plain
-1
-2
-3
-4
-5
-```

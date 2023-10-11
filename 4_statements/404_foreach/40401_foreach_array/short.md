@@ -5,12 +5,3 @@ foreach int number in numbers {
     io:println(number);
 }
 ```
-`bal run`
-
-```plain
-1
-2
-3
-4
-5
-```

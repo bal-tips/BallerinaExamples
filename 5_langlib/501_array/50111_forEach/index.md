@@ -5,22 +5,24 @@ keywords:
     - forEach array function
     - array handling 
 weight: 50111
-ballerina_feature: [iterate]
-ballerina_lang: []
-ballerina_type: [list, json]
-ballerina_module: [array]
+tags:
+    - "forEach function"
+    - "array"
+categories:
+    - "Array Functions"
+series:
+    - "Working with Arrays"
+    - "Methods of Iteration"
 date: 2023-07-31
 ---
 
-This example demonstrates the usage of the `forEach` function in Ballerina. The `forEach` function is used to iterate through the elements of an array. The `forEach` function takes a function as a parameter. The function passed as a parameter to the `forEach` function is executed for each element of the array. The function passed as a parameter to the `forEach` function can be a lambda (anonymous) function or a function pointer.
+This example highlights the use of the forEach function in Ballerina to iterate over array elements. The forEach function accepts a function as its parameter, which is executed for each array element. This provided function can be either a lambda (anonymous) function or a function pointer.
 
 <!--more-->
 
-## Example
-
 {{< example >}}
 
-## Running the Example
+#### Running the Example
 
 To run this example on your local machine, follow these steps:
 

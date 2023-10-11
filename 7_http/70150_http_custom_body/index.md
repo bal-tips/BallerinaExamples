@@ -6,10 +6,15 @@ keywords:
     - resource function
     - HTTP Response
 weight: 70150
-ballerina_feature: [resource, service]
-ballerina_lang: [service, type_definition, record_inclusion]
-ballerina_type: [record]
-ballerina_module: [http]
+tags: 
+    - "http"
+    - "service"
+    - "custom types"
+categories:
+    - "Services"
+series:
+    - "HTTP Services and APIs"
+    - "Ensure Type Safety"
 date: 2023-08-14
 ---
 
@@ -22,24 +27,22 @@ In Ballerina, you may sometimes want to add custom information to an HTTP respon
 Below, you can see an example of how a typo in the field name can still be syntactically valid, potentially leading to unexpected behavior.
 
 ```ballerina
-// Valid & expected by the client
+// Expected
 http:Created res = {body: {name: "Bal.tip", id: "123"}}; 
 
-// Valid, but not expected by the client. Typo in the field name.
+// Still valid at compile time, but the typo will cause runtime error
 http:Created res = {body: {neme: "Bal.tip", id: "123"}}; 
 ```
 
-The second line is valid Ballerina code, but the typo in the field name (`neme` instead of `name`) could lead to unexpected results at runtime.
+The second line contains valid Ballerina code. However, the typo in the field name (`neme` instead of `name`) might cause unexpected runtime results.
 
-## Example
+To prevent such problems and enhance code robustness and type-safety, consider defining a new record type that represents the desired payload. This approach allows you to harness Ballerina's robust type system to detect errors during compilation.
 
-To avoid such issues and make your code more robust and type-safe, it's advisable to define a new record type that represents the actual payload you want to send. This way, you can leverage Ballerina's powerful type system to catch any mistakes at compile time.
+{{< example test=true >}}
 
-{{< example project=true test=true >}}
+In this type-safe approach, the body's structure is clearly outlined, specifying expected fields. This not only enables the compiler to identify mistakes but also enhances code clarity, maintainability, and safety.
 
-In this type-safe version, the structure of the body is explicitly defined, making it clear what fields are expected and allowing the compiler to catch any mistakes. It adds an extra layer of safety and clarity to your code, making it more maintainable and less error-prone.
-
-## Running the Example
+#### Running the Example
 
 To run this example on your local machine, follow these steps:
 
@@ -50,7 +53,7 @@ To run this example on your local machine, follow these steps:
 
 Your service should now be running on `localhost:9090`.
 
-## Testing the Service
+#### Testing the Service
 
 You can test this service using the `curl` command in the terminal:
 
@@ -70,6 +73,6 @@ Open a new terminal window and enter the following command, replacing `{name}` w
 
     You should see a json message in the terminal.
 
-## Stopping the Server
+#### Stopping the Server
 
 To stop the server, you can press `Ctrl + C` in the terminal where the server is running. This will terminate the Ballerina process and stop the server.

@@ -6,21 +6,28 @@ keywords:
     - array handling
     - JSON array
 weight: 40401
-ballerina_feature: [iterate]
-ballerina_lang: [foreach]
-ballerina_type: [list, json]
+tags:
+    - "foreach"
+    - "loop"
+    - "array"
+    - "JSON array"
+categories:
+    - "Iteration"
+series:
+    - Methods of Iteration
+    - Working with Arrays
 date: 2023-07-31
 ---
 
-This walkthrough focuses on using the foreach statement to loop through different types of arrays in Ballerina. We'll use both an integer array and a JSON array for this purpose. We'll then explain the code line by line to help you understand each component.
+This walkthrough demonstrates how to use the `foreach`` statement in Ballerina to iterate over arrays, including both integer and JSON arrays. We'll break down the code to help you understand every detail.
 
 <!--more-->
-
-## Example
+Here's the complete code for this example. Refer to <span class="text-info"><i class="far fa-lightbulb"></i> Tips</span> for line-by-line explanations.
 
 {{< example >}}
 
-## Running the Example
+
+#### Running the Example
 
 To run this example on your local machine, follow these steps:
 

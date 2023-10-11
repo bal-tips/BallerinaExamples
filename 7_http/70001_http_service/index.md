@@ -5,10 +5,14 @@ keywords:
     - HTTP service
     - resource function
 weight: 70001
-ballerina_feature: [resource, service]
-ballerina_lang: [service,]
-ballerina_type: []
-ballerina_module: [http]
+tags: 
+    - "http"
+    - "service"
+categories:
+    - "Services"
+series:
+    - "Hello World"
+    - "HTTP Services and APIs"
 date: 2023-07-30
 ---
 
@@ -16,11 +20,10 @@ Welcome to our example of creating a simple HTTP Greeting Service using Ballerin
 
 <!--more-->
 
-## Example
 
 {{< example project=true test=true >}}
 
-## Running the Example
+#### Running the Example
 
 To run this example on your local machine, follow these steps:
 
@@ -31,21 +34,21 @@ To run this example on your local machine, follow these steps:
 
 Your service should now be running on `localhost:9090`.
 
-## Testing the Service
+#### Testing the Service
 
 You can test this service using either a web browser or the `curl` command in the terminal:
 
 1. **Web Browser:** Simply navigate to `localhost:9090/greeting/{name}` in your browser, replacing `{name}` with any name of your choosing. You should see a greeting message.
    
-   e.g., `localhost:9090/greeting/Ballerina`
+   e.g., `http://localhost:9090/greeting/Ballerina`
 
 2. **Curl:** Open a new terminal window and enter the following command, replacing `{name}` with any name of your choosing:
 
     ```bash
-    curl localhost:9090/greeting/{name}
+    curl http://localhost:9090/greeting/{name}
     ```
 
-    e.g., `curl localhost:9090/greeting/Ballerina`
+    e.g., `curl http://localhost:9090/greeting/Ballerina`
 
     You should see a greeting message in the terminal.
 

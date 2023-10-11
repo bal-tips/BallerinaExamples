@@ -11,12 +11,3 @@ array:forEach(numbers, (n) => io:println(n));
 numbers.forEach(printNumberFunction);
 array:forEach(numbers, printNumberFunction);
 ```
-`bal run`
-
-```plain
-1
-2
-3
-4
-5
-```

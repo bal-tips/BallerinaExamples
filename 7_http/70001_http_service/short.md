@@ -7,11 +7,17 @@ service /greeting on new http:Listener(9090) {
     }
 }
 ```
-Terminal 1:
-`bal run`
+Terminal 1
+<i class="fa fa-terminal"></i><br> 
+```
+bal run
+```
 
-Terminal 2:
-`curl localhost:9090/greeting/Ballerina`
+Terminal 2
+<i class="fa fa-terminal"></i><br>
+```
+curl http://localhost:9090/greeting/Ballerina
+```
 
 ```plain
 Greetings, Ballerina...!
