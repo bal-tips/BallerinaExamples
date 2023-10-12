@@ -59,17 +59,17 @@ You can test this service using the `curl` command in the terminal:
 
 Open a new terminal window and enter the following command, replacing `{name}` with any name of your choosing:
 
-    ```bash
-    curl -X 'PUT' \
-    'http://localhost:9090/book?name={name}'
-    ```
+```bash
+curl -X 'PUT' \
+'http://localhost:9090/book?name={name}'
+```
     
-    e.g., 
+e.g., 
   
-    ```bash
-    curl -X 'PUT' \
-    'http://localhost:9090/book?name=BallerinaByExample'
-    ```
+```bash
+curl -X 'PUT' \
+'http://localhost:9090/book?name=BallerinaByExample'
+```
 
     You should see a json message in the terminal.
 
