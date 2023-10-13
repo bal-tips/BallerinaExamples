@@ -10,6 +10,7 @@ Here, we declare the import of the `io` module from the `ballerina` organization
 - The identifier `io` acts as a prefix, allowing us to reference this module later in the source file.
 - The `io` module is essential here, as we'll be using it to print a line to the standard output (STDOUT).
 
+--- 
 #### Line 2: Formatting the Code{id="line-2"}
 
 ```ballerina {linenos=table,linenostart=2}
@@ -17,6 +18,8 @@ Here, we declare the import of the `io` module from the `ballerina` organization
 ```
 
 This empty line is intentionally added for readability and better formatting. Proper formatting makes our code easy to read and understand.
+
+--- 
 
 #### Lines 3 & 5: Defining the Main Function{id="line-3-5"}
 
@@ -30,6 +33,8 @@ These lines define the `main` function, which serves as the entry point to the p
 - We begin with the keyword `function`, followed by the function's name - in this case, `main`.
 - The `main` function is required to be public, indicated by the `public` keyword, since it's invoked from outside its module scope (the program runner in this case).
 - The function's scope is delineated by open `{` and close `}` braces.
+
+---
 
 #### Line 4: Printing "Hello, World!"{id="line-4"}
 

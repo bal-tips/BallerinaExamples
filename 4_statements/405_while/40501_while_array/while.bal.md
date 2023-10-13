@@ -6,6 +6,8 @@ import ballerina/io;
 
 As with the previous examples, we are importing the `io` module from the `ballerina` organization, which enables interactions with the console.
 
+---
+
 #### Lines 3-13: The `processIntArray` Function and While Loop{id="line-3-13"}
 
 ```ballerina {linenos=table,linenostart=3}
@@ -27,6 +29,8 @@ This function showcases how to use a `while` loop to iterate over an integer arr
 - Initialize a counter variable `currentIndex` to 0 for array traversal.
 - Using a `while` loop, iterate through each element of the array as long as `currentIndex` is less than the length of the `numbers` array.
 - For each iteration, assign the current array element to `currentNumber` and print it out, then increment `currentIndex` by 1.
+
+---
 
 #### Lines 15-29: The `processJsonArray` Function and While Loop{id="line-15-29"}
 
@@ -55,6 +59,8 @@ The `processJsonArray` function demonstrates how to use a `while` loop with a JS
 - For each iteration, assign the current array element to `person` and print it out, then increment `currentIndex` by 1.
 
 Note that the `toString()` method is used to convert the JSON object to a string value before printing it out.
+
+---
 
 #### Lines 31-38: Main Function and Function Calls{id="line-31-38"}
 

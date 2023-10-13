@@ -9,6 +9,8 @@ Here, we're importing the `http` module from the `ballerina` organization.
 - This import statement allows us to use the HTTP functionalities that the `http` module provides in our service.
 - The identifier `http` acts as a prefix, enabling us to reference this module elsewhere in the source file.
 
+---
+
 #### Lines 3 & 7: Defining the Service
 
 ```ballerina {linenos=table,linenostart=3}
@@ -22,6 +24,8 @@ These lines define the `greeting` service.
 - The service runs on an HTTP listener that listens on port `9090`.
 - The scope of the service is marked by the open `{` and closing `}` braces.
 
+---
+
 #### Lines 4-6: Defining the Resource Function
 
 ```ballerina {linenos=table,linenostart=4}
@@ -34,6 +38,8 @@ These lines define the `get` resource function within the service.
 - The function expects a string parameter `name`, which it retrieves from the URL (this is a path parameter).
 - The function returns a string as a response.
 - The scope of the resource function is defined by the open `{` and closing `}` braces.
+
+---
 
 #### Line 5: Constructing the Greeting
 

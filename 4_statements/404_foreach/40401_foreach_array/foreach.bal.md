@@ -6,6 +6,8 @@ import ballerina/io;
 
 As with the previous example, we're importing the `io` module from the `ballerina` organization to enable console interactions.
 
+---
+
 #### Lines 3-9: The processIntArray Function and Foreach Loop{id="line-3-9"}
 
 ```ballerina {linenos=table,linenostart=3}
@@ -23,6 +25,8 @@ This function showcases the use of a `foreach` loop to iterate over an integer a
 - Iterate through each element of the array using a `foreach` loop, where `number` is the variable holding the current element.
 - Print each number to STDOUT using the `println` function of the `io` module.
 
+
+---
 
 #### Lines 11-21: The `processJsonArray` Function and Foreach Loop{id="line-11-21"}
 
@@ -46,6 +50,8 @@ The `processJsonArray` function demonstrates the usage of a `foreach` loop with 
 - We then print each JSON object to STDOUT using the `println` function.
 
 Note that the `toString` function is used to convert the JSON object to a string value to use inside the string interpolation.
+
+---
 
 #### Lines 23-30: Main Function and Function Calls{id="line-23-30"}
 
