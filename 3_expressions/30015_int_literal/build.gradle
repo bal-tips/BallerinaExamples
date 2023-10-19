@@ -1,0 +1,29 @@
+
+task test() {
+    def currentDir = file(".")
+    inputs.files(fileTree(".").include("*.bal"), "Ballerina.toml", "short.md", "output.txt", "tests/test.bal")
+    outputs.dir("target")
+    doLast {
+        exec {
+            workingDir currentDir
+            commandLine "bash", "-c", "bal test"
+        }
+    }
+    // Check if the short.md and index.md files exist using gradle
+    if (!file("short.md").exists()) {
+        throw new GradleException("short.md file does not exist");
+    } else if (!file("index.md").exists()) {
+        throw new GradleException("index.md file does not exist");
+    }
+    // TODO: Check for each Bal file, there is a md file.
+}
+
+task clean() {
+    def currentDir = file(".")
+    doLast {
+        exec {
+            workingDir currentDir
+            commandLine "bash", "-c", "bal clean"
+        }
+    }
+} 

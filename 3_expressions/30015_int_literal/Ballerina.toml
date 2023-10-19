@@ -1,0 +1,7 @@
+build-options.observabilityIncluded = false
+
+[package]
+org = "baltips"
+name = "app30015_int_literal"
+version = "0.1.0"
+distribution = "2201.8.1"
