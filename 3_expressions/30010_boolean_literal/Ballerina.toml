@@ -2,6 +2,6 @@ build-options.observabilityIncluded = false
 
 [package]
 org = "baltips"
-name = "app10001_hello_world"
-distribution = "2201.8.1"
+name = "app30010_boolean_literal"
 version = "0.1.0"
+distribution = "2201.8.1"

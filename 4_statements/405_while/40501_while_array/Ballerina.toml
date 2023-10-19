@@ -3,5 +3,5 @@ build-options.observabilityIncluded = false
 [package]
 org = "baltips"
 name = "app40501_while_array"
-distribution = "2201.8.0"
+distribution = "2201.8.1"
 version = "0.1.0"

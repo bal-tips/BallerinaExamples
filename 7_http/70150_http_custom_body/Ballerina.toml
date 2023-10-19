@@ -4,4 +4,4 @@ build-options.observabilityIncluded = false
 org = "baltips"
 name = "app70150_http_custom_body"
 version = "0.1.0"
-distribution = "2201.8.0"
+distribution = "2201.8.1"
