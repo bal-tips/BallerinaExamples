@@ -1,6 +1,6 @@
 **Less Type Safe Version:**
 
-```
+```ballerina
 // Expected
 http:Created res = {body: {name : "Bal.tip", id: "123"}}; 
 
@@ -10,7 +10,7 @@ http:Created res = {body: {neme : "Bal.tip", id: "123"}};
 
 **Type safe version:**
 
-```
+```ballerina
 public type Created record {|
     *http:Created;
     record {|
